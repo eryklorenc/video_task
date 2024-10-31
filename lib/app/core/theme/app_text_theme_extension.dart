@@ -30,7 +30,7 @@ class AppTextThemeExtension extends ThemeExtension<AppTextThemeExtension> {
         ),
         body2: const TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 20,
+          fontSize: 25,
         ),
       );
   @override

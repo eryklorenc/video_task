@@ -8,11 +8,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          S.of(context).start,
-          style: Theme.of(context).xTextTheme.display1,
+      appBar: AppBar(
+        title: Text(
+          S.of(context).logo,
+          style: Theme.of(context).xTextTheme.body2,
         ),
+        centerTitle: true,
+        leading: const Icon(Icons.menu),
+        actions: const [
+          Icon(Icons.favorite_border_outlined),
+          SizedBox(width: 10),
+          Icon(Icons.search),
+          SizedBox(width: 10),
+        ],
       ),
     );
   }
