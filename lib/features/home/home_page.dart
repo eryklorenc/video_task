@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_task/app/core/theme/app_text_theme_extension.dart';
+import 'package:video_task/app/core/utils/screen_size.dart';
 import 'package:video_task/generated/l10n.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,6 +22,27 @@ class HomePage extends StatelessWidget {
           Icon(Icons.search),
           SizedBox(width: 10),
         ],
+      ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.grey[200],
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsetsSS.all(2),
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              S.of(context).polecane,
+              style: Theme.of(context).xTextTheme.body1,
+            ),
+          ),
+        ),
       ),
     );
   }

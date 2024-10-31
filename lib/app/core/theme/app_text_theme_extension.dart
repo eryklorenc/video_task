@@ -25,11 +25,11 @@ class AppTextThemeExtension extends ThemeExtension<AppTextThemeExtension> {
           fontWeight: FontWeight.w500,
         ),
         body1: const TextStyle(
-          fontSize: 12,
-          fontWeight: FontWeight.w300,
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
         ),
         body2: const TextStyle(
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w600,
           fontSize: 25,
         ),
       );

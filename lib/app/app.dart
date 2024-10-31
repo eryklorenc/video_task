@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:video_task/app/core/theme/app_colors.dart';
 import 'package:video_task/app/core/theme/app_text_theme_extension.dart';
+import 'package:video_task/app/core/utils/screen_size.dart';
 import 'package:video_task/features/home/home_page.dart';
 import 'package:video_task/generated/l10n.dart';
 
@@ -9,6 +10,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+    ScreenSize.initSingleton(context);
     return MaterialApp(
       supportedLocales: S.delegate.supportedLocales,
       localizationsDelegates: const [
