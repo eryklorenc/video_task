@@ -79,6 +79,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Zaplanuj podróż`
+  String get zaplanuj_podroz {
+    return Intl.message(
+      'Zaplanuj podróż',
+      name: 'zaplanuj_podroz',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Szlaki`
+  String get szlaki {
+    return Intl.message(
+      'Szlaki',
+      name: 'szlaki',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_task/app/core/theme/app_colors.dart';
 
 extension XTheme on ThemeData {
   AppTextThemeExtension get xTextTheme => extension<AppTextThemeExtension>()!;
@@ -21,8 +22,9 @@ class AppTextThemeExtension extends ThemeExtension<AppTextThemeExtension> {
           fontWeight: FontWeight.w500,
         ),
         display1: const TextStyle(
-          fontSize: 23,
-          fontWeight: FontWeight.w500,
+          fontSize: 15,
+          fontWeight: FontWeight.w800,
+          color: AppColors.white,
         ),
         body1: const TextStyle(
           fontSize: 25,
