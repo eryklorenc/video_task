@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_task/app/core/const/const.dart';
 import 'package:video_task/app/core/theme/app_colors.dart';
 import 'package:video_task/app/core/theme/app_text_theme_extension.dart';
 import 'package:video_task/app/core/utils/screen_size.dart';
@@ -97,7 +98,7 @@ class HomePage extends StatelessWidget {
                         ),
                         ImageContainer(
                           text: S.of(context).hours,
-                          imageUrl: 'https://d-art.ppstatic.pl/kadry/k/r/e2/7c/5b716c5068e62_o_medium.jpg',
+                          imageUrl: Const.imageUrl1,
                           width: 45,
                           height: 20,
                           icon: const Icon(
@@ -107,8 +108,7 @@ class HomePage extends StatelessWidget {
                         ),
                         ImageContainer(
                           text: S.of(context).hours,
-                          imageUrl:
-                              'https://st5.depositphotos.com/26169494/64665/i/450/depositphotos_646653518-stock-photo-magic-trees-paths-forest-slovakia.jpg',
+                          imageUrl: Const.imageUrl2,
                           width: 45,
                           height: 20,
                           icon: const Icon(
@@ -123,7 +123,7 @@ class HomePage extends StatelessWidget {
                       children: [
                         ImageContainer(
                           text: S.of(context).hours,
-                          imageUrl: 'https://slaskaopinia.pl/wp-content/uploads/2024/03/most_marzec2024c.jpg',
+                          imageUrl: Const.imageUrl3,
                           width: 45,
                           height: 25,
                           icon: const Icon(
@@ -134,7 +134,7 @@ class HomePage extends StatelessWidget {
                         ),
                         ImageContainer(
                           text: S.of(context).hours,
-                          imageUrl: 'https://d-art.ppstatic.pl/kadry/k/r/bc/75/64cb500352794_o_original.jpg',
+                          imageUrl: Const.imageUrl4,
                           width: 45,
                           height: 25,
                           icon: const Icon(
@@ -145,8 +145,7 @@ class HomePage extends StatelessWidget {
                         ),
                         ImageContainer(
                           text: S.of(context).hours,
-                          imageUrl:
-                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQueZHY8ez55d5yxk6JmEmEz5OJc-W8kSyARw&s',
+                          imageUrl: Const.imageUrl5,
                           width: 45,
                           height: 25,
                           icon: const Icon(
@@ -157,8 +156,7 @@ class HomePage extends StatelessWidget {
                         ),
                         ImageContainer(
                           text: S.of(context).hours,
-                          imageUrl:
-                              'https://st5.depositphotos.com/26169494/64665/i/450/depositphotos_646653518-stock-photo-magic-trees-paths-forest-slovakia.jpg',
+                          imageUrl: Const.imageUrl2,
                           width: 45,
                           height: 25,
                           icon: const Icon(
