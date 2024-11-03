@@ -3,9 +3,9 @@ import 'package:video_task/app/core/const/const.dart';
 import 'package:video_task/app/core/theme/app_colors.dart';
 import 'package:video_task/app/core/theme/app_text_theme_extension.dart';
 import 'package:video_task/app/core/utils/screen_size.dart';
-import 'package:video_task/features/home/widgets/custom_container.dart';
-import 'package:video_task/features/home/widgets/down_arrow_button.dart';
-import 'package:video_task/features/home/widgets/image_container.dart';
+import 'package:video_task/features/recommended/widgets/custom_container.dart';
+import 'package:video_task/features/recommended/widgets/down_arrow_button.dart';
+import 'package:video_task/features/recommended/widgets/image_container.dart';
 import 'package:video_task/features/video/video_page.dart';
 import 'package:video_task/generated/l10n.dart';
 

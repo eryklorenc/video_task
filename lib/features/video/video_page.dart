@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:video_task/features/home/widgets/recommended_section.dart';
+import 'package:video_task/features/recommended/widgets/recommended_section.dart';
 
 class VideoPage extends StatefulWidget {
   const VideoPage({super.key});

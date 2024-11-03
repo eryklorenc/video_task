@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:video_task/app/core/theme/app_text_theme_extension.dart';
 import 'package:video_task/app/core/utils/screen_size.dart';
-import 'package:video_task/features/home/widgets/recommended_section.dart';
+import 'package:video_task/features/recommended/widgets/recommended_section.dart';
 import 'package:video_task/generated/l10n.dart';
 
 class HomePage extends StatelessWidget {
