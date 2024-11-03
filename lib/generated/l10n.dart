@@ -10,7 +10,7 @@ import 'intl/messages_all.dart';
 
 // ignore_for_file: non_constant_identifier_names, lines_longer_than_80_chars
 // ignore_for_file: join_return_with_assignment, prefer_final_in_for_each
-// ignore_for_file: avoid_redundant_argument_values, avoid_escaping_inner_quotes
+// ignore_for_file: avoid_redundant_argument_values
 
 class S {
   S();
@@ -18,46 +18,33 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null,
-        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(_current != null, 'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
-  static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
+  static const AppLocalizationDelegate delegate =
+    AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
-    final localeName = Intl.canonicalizedLocale(name);
+    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final localeName = Intl.canonicalizedLocale(name); 
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
       final instance = S();
       S._current = instance;
-
+ 
       return instance;
     });
-  }
+  } 
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(instance != null,
-        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+    assert(instance != null, 'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
     return instance!;
   }
 
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
-  }
-
-  /// `Start`
-  String get start {
-    return Intl.message(
-      'Start',
-      name: 'start',
-      desc: '',
-      args: [],
-    );
   }
 
   /// `Logo`
@@ -71,30 +58,50 @@ class S {
   }
 
   /// `Polecane`
-  String get polecane {
+  String get recommended {
     return Intl.message(
       'Polecane',
-      name: 'polecane',
+      name: 'recommended',
       desc: '',
       args: [],
     );
   }
 
   /// `Zaplanuj podróż`
-  String get zaplanuj_podroz {
+  String get plan_your_trip {
     return Intl.message(
       'Zaplanuj podróż',
-      name: 'zaplanuj_podroz',
+      name: 'plan_your_trip',
       desc: '',
       args: [],
     );
   }
 
   /// `Szlaki`
-  String get szlaki {
+  String get trails {
     return Intl.message(
       'Szlaki',
-      name: 'szlaki',
+      name: 'trails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dłuższe godziny zwiedzania Muzeum`
+  String get hours {
+    return Intl.message(
+      'Dłuższe godziny zwiedzania Muzeum',
+      name: 'hours',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Carbonerum dla licealistów`
+  String get carbonerum {
+    return Intl.message(
+      'Carbonerum dla licealistów',
+      name: 'carbonerum',
       desc: '',
       args: [],
     );

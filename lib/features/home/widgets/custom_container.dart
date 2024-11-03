@@ -32,7 +32,7 @@ class CustomContainer extends StatelessWidget {
           child: Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding: const EdgeInsetsSS.only(left: 5, bottom: 2),
+              padding: const EdgeInsetsSS.only(left: 4, bottom: 2),
               child: Text(
                 text,
                 style: Theme.of(context).xTextTheme.display1,

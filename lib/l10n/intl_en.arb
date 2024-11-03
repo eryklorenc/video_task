@@ -1,9 +1,9 @@
 {
     "@@locale": "en",
-    "start": "Start",
     "logo": "Logo",
-    "polecane": "Polecane",
-    "zaplanuj_podroz": "Zaplanuj podróż",
-    "szlaki": "Szlaki"
-
+    "recommended": "Polecane",
+    "plan_your_trip": "Zaplanuj podróż",
+    "trails": "Szlaki",
+    "hours": "Dłuższe godziny zwiedzania Muzeum",
+    "carbonerum": "Carbonerum dla licealistów"
 }
