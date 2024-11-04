@@ -3,7 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:video_task/app/core/theme/app_colors.dart';
 import 'package:video_task/app/core/theme/app_text_theme_extension.dart';
 import 'package:video_task/app/core/utils/screen_size.dart';
-import 'package:video_task/features/recommended/recommended_page.dart';
+import 'package:video_task/features/video/video_page.dart';
 import 'package:video_task/generated/l10n.dart';
 
 class MyApp extends StatelessWidget {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           AppTextThemeExtension.initialize(),
         ],
       ),
-      home: const HomePage(),
+      home: const VideoPage(),
     );
   }
 }

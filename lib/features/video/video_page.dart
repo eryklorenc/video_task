@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import 'package:video_task/app/core/const/const.dart';
+import 'package:video_task/app/core/theme/app_colors.dart';
+import 'package:video_task/app/core/utils/screen_size.dart';
+import 'package:video_task/features/recommended/recommended_page.dart';
 import 'package:video_task/features/recommended/widgets/recommended_section.dart';
+import 'package:video_task/features/video/widgets/circle_icon.dart';
 
 class VideoPage extends StatefulWidget {
   const VideoPage({super.key});
@@ -11,17 +16,18 @@ class VideoPage extends StatefulWidget {
 
 class VideoPageState extends State<VideoPage> {
   late VideoPlayerController _videoController;
-  bool _isVideoVisible = true;
+  bool _isLoading = true;
 
   @override
   void initState() {
     super.initState();
     _videoController = VideoPlayerController.networkUrl(
-      Uri.parse(
-          'https://images.all-free-download.com/footage_preview/mp4/closeup_of_honey_bee_on_wild_flower_6891910.mp4'),
+      Uri.parse(Const.videoUrl),
     )
       ..initialize().then((_) {
-        setState(() {});
+        setState(() {
+          _isLoading = false;
+        });
         _videoController.play();
       })
       ..addListener(_videoEndListener);
@@ -36,60 +42,58 @@ class VideoPageState extends State<VideoPage> {
 
   void _videoEndListener() {
     if (_videoController.value.position >= _videoController.value.duration) {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => const HomePage()),
-      // );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const RecommendedPage()),
+      );
     }
-  }
-
-  void _toggleVideoVisibility() {
-    setState(() {
-      _isVideoVisible = !_isVideoVisible;
-      if (_isVideoVisible) {
-        _videoController.seekTo(Duration.zero);
-        _videoController.play();
-      } else {
-        _videoController.pause();
-        // Navigator.pushReplacement(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => const HomePage()),
-        // );
-      }
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        scrolledUnderElevation: 0,
-        title: Text(
-          '',
-          style: Theme.of(context).textTheme.bodyMedium,
-        ),
         centerTitle: true,
-        leading: const Icon(Icons.menu),
+        leading: const CircleIcon(icon: Icons.menu),
         actions: const [
-          Icon(Icons.favorite_border_outlined),
-          SizedBox(width: 10),
-          Icon(Icons.search),
-          SizedBox(width: 10),
+          CircleIcon(icon: Icons.favorite_border_outlined),
+          CircleIcon(icon: Icons.search),
         ],
       ),
-      body: Column(
+      body: Stack(
         children: [
-          if (_isVideoVisible && _videoController.value.isInitialized)
-            AspectRatio(
-              aspectRatio: _videoController.value.aspectRatio,
-              child: VideoPlayer(_videoController),
-            ),
-          const Expanded(
-            child: SingleChildScrollView(
-              child: RecommendedSection(),
-            ),
+          Column(
+            children: [
+              if (_videoController.value.isInitialized)
+                AspectRatio(
+                  aspectRatio: _videoController.value.aspectRatio,
+                  child: VideoPlayer(_videoController),
+                ),
+              if (_isLoading)
+                const Padding(
+                  padding: EdgeInsetsSS.only(top: 15),
+                  child: Center(
+                    child: CircularProgressIndicator(
+                      color: AppColors.black,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          Column(
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.3,
+              ),
+              const Expanded(
+                child: SingleChildScrollView(
+                  child: RecommendedSection(),
+                ),
+              ),
+            ],
           ),
         ],
       ),

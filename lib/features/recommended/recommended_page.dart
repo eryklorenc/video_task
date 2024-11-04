@@ -4,8 +4,8 @@ import 'package:video_task/app/core/utils/screen_size.dart';
 import 'package:video_task/features/recommended/widgets/recommended_section.dart';
 import 'package:video_task/generated/l10n.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class RecommendedPage extends StatelessWidget {
+  const RecommendedPage({super.key});
 
   @override
   Widget build(BuildContext context) {
