@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenSize.initSingleton(context);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       supportedLocales: S.delegate.supportedLocales,
       localizationsDelegates: const [
         S.delegate,
