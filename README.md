@@ -1,16 +1,15 @@
-# video_task
+<h1>Video Task</h1>
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<h2>Technologies used</h2>
 
-A few resources to get you started if this is your first Flutter project:
+<p><em>-Dart</p></em>
+<p><em>-Flutter</p></em>
+<p><em>-Bloc/Cubit</p></em>
+<p><em>-Code generators e.g. Freezed, Get It, Injectable</p></em>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![ekran](https://github.com/user-attachments/assets/00f642bc-ea96-4fd8-842e-fadf400c9e87)
+
+![next_ekran](https://github.com/user-attachments/assets/b469d4f8-4143-402b-b4f8-9d8a822ad0be)
