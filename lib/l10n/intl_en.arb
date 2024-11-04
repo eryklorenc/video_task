@@ -5,5 +5,6 @@
     "plan_your_trip": "Zaplanuj podróż",
     "trails": "Szlaki",
     "hours": "Dłuższe godziny zwiedzania Muzeum",
-    "carbonerum": "Carbonerum dla licealistów"
+    "carbonerum": "Carbonerum dla licealistów",
+    "error_message": "Error: {message}"
 }

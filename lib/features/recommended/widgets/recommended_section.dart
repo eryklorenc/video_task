@@ -140,6 +140,7 @@ class RecommendedSection extends StatelessWidget {
                     ),
                     showBorder: false,
                   ),
+                  const SizedBox(height: 5),
                 ],
               ),
             ],

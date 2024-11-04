@@ -106,6 +106,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Error: {message}`
+  String error_message(Object message) {
+    return Intl.message(
+      'Error: $message',
+      name: 'error_message',
+      desc: '',
+      args: [message],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

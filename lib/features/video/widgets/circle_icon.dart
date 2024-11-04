@@ -14,7 +14,7 @@ class CircleIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return ContainerSS(
       padding: const EdgeInsetsSS.all(2),
-      margin: const EdgeInsetsSS.only(left: 4),
+      margin: const EdgeInsetsSS.only(left: 2),
       decoration: BoxDecoration(
         color: AppColors.white.withOpacity(0.3),
         shape: BoxShape.circle,
